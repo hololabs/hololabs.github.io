@@ -6,13 +6,7 @@
 
 <h2>Images</h2>
 
-<div id="masonry-container"
-  class="js-masonry"
-  data-masonry-options='{
-    "itemSelector": ".item",
-    "columnWidth": ".grid-sizer",
-    "gutter": 10
-  }'>
+<div id="masonry-container">
 
 <div class="grid-sizer"></div>
 
@@ -24,16 +18,19 @@
 
 </div>
 
+<script src="/js/imagesloaded.pkgd.min.js"></script>
 <script src="/js/masonry.pkgd.min.js"></script>
 <script>
-/*
 var container = document.querySelector('#masonry-container');
-var msnry = new Masonry( container, {
-  columnWidth: 295,
+var msnry;
+// initialize Masonry after all images have loaded:
+imagesLoaded( container, function() {
+  msnry = new Masonry( container, {
+  "columnWidth": ".grid-sizer",
   "gutter": 10,
-  itemSelector: '.item'
+  "itemSelector": '.item'
+  });
 });
-*/
 </script>
 
 
