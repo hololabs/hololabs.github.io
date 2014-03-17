@@ -8,6 +8,10 @@ body {
   background: #eee;
 }
 
+iframe {
+  max-width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
@@ -145,6 +149,7 @@ header #menu ul {
   border:1px solid #d2d2d2;
   width:270px;
   
+  margin-top: 20px;
   margin-bottom: 0;
 }
 
@@ -194,9 +199,15 @@ header #menu ul a strong {
 }
 
 .banner {
-  margin-bottom:20px;
+  margin-bottom:10px;
+  width: 100%;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
 }
+
 
 section {
   /* width:500px;*/
@@ -328,7 +339,8 @@ footer li {
   
   div.wrapper {
     width:auto;
-    margin:0;
+    /*margin:0;*/
+    margin: 10px 0 0 0;
   }
   
   header, section, footer {
@@ -355,7 +367,14 @@ footer li {
   header #menu {
     position:absolute;
     right:50px;
-    top:52px;
+    top:20px;
+    /*top:52px;*/
+    margin-bottom: 10px;
+  }
+  
+  header #menu ul {
+    margin-top: 0;
+    
   }
 }
 
@@ -373,6 +392,7 @@ footer li {
   }
   
   header #menu ul {
+    margin-top: 20px;
     position: static;
     margin-left: auto;
     margin-right: auto;
