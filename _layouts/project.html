@@ -1,15 +1,12 @@
 {% include header.html %}
 
-{% markdown %}
-
 {{ content }}
-
-{% endmarkdown %}
 
 <p>&nbsp;</p>
 
 <h2>Images</h2>
 
+<!--
 <div id="masonry-container"
   class="js-masonry"
   data-masonry-options='{
@@ -17,6 +14,8 @@
     "columnWidth": 295,
     "gutter": 10
   }'>
+-->
+<div id="masonry-container">
 
 {% for img in page.images %}
   <div class="item">
@@ -25,6 +24,16 @@
 {% endfor %}
 
 </div>
+
+<script src="/js/masonry.pkgd.min.js"></script>
+<script>
+var container = document.querySelector('#masonry-container');
+var msnry = new Masonry( container, {
+  columnWidth: 295,
+  "gutter": 10,
+  itemSelector: '.item'
+});
+</script>
 
 
 {% include footer.html %}

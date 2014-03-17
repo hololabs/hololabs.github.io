@@ -16,6 +16,7 @@ art installations and virtual reality.
 
 <p>&nbsp;</p>
 
+<!--
 <div id="masonry-container"
   class="js-masonry"
   data-masonry-options='{
@@ -23,7 +24,8 @@ art installations and virtual reality.
     "columnWidth": 295,
     "gutter": 10
   }'>
-
+-->
+<div id="masonry-container">
 
   <div class="item">
   <img src="paul.jpg">
@@ -95,3 +97,14 @@ art installations and virtual reality.
 
 
 </div>
+
+
+<script src="/js/masonry.pkgd.min.js"></script>
+<script>
+var container = document.querySelector('#masonry-container');
+var msnry = new Masonry( container, {
+  columnWidth: 295,
+  "gutter": 10,
+  itemSelector: '.item'
+});
+</script>
