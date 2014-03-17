@@ -3,10 +3,6 @@ layout: default
 title: Hololabs Team
 ---
 
-<img src="/images/header.png" width="100%">
-
-<p>&nbsp;</p>
-
 <h2>The Hololabs Team</h2>
 
 With professional backgrounds in AAA video games and interactive media
@@ -16,17 +12,17 @@ art installations and virtual reality.
 
 <p>&nbsp;</p>
 
-<!--
+
 <div id="masonry-container"
   class="js-masonry"
   data-masonry-options='{
     "itemSelector": ".item",
-    "columnWidth": 295,
+    "columnWidth": ".grid-sizer",
     "gutter": 10
   }'>
--->
-<div id="masonry-container">
-
+  
+  <div class="grid-sizer"></div>
+  
   <div class="item">
   <img src="paul.jpg">
   <p>
@@ -101,10 +97,12 @@ art installations and virtual reality.
 
 <script src="/js/masonry.pkgd.min.js"></script>
 <script>
+/*
 var container = document.querySelector('#masonry-container');
 var msnry = new Masonry( container, {
-  columnWidth: 295,
+  "columnWidth": 295,
   "gutter": 10,
-  itemSelector: '.item'
+  "itemSelector": '.item'
 });
+*/
 </script>

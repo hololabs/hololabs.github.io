@@ -294,8 +294,12 @@ footer li {
 
 /* masonry customization */
 
+#masonry-container .grid-sizer {
+    width: 49%;
+  }
+
 #masonry-container .item {
-  width: 50%;
+  width: 49%;
   background:#fff;
   margin: 0 0 10px 0;
   text-align:center;
@@ -380,6 +384,14 @@ footer li {
     display:none;
   }
   */
+  
+  #masonry-container .grid-sizer {
+    width: 98%;
+  }
+  #masonry-container .item {
+    width: 98%;
+  }
+
   
   [class*='col-'] {
     width:100%;
