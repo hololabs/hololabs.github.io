@@ -1,0 +1,30 @@
+{% include header.html %}
+
+{% markdown %}
+
+{{ content }}
+
+{% endmarkdown %}
+
+<p>&nbsp;</p>
+
+<h2>Images</h2>
+
+<div id="masonry-container"
+  class="js-masonry"
+  data-masonry-options='{
+    "itemSelector": ".item",
+    "columnWidth": 295,
+    "gutter": 10
+  }'>
+
+{% for img in page.images %}
+  <div class="item">
+  <a href="{{ img.file }}" target="_blank"><img src="{{ img.file }}"></a><br>{{ img.caption }}
+  </div>
+{% endfor %}
+
+</div>
+
+
+{% include footer.html %}
