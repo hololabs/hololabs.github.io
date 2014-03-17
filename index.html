@@ -1,6 +1,13 @@
 ---
 layout: default
 title: About Hololabs
+images:
+ - file: Hololabs_Logo_512_Black.png
+   caption: Hololabs_Logo_512_Black.png
+   eps: Hololabs_Logo_Black.eps
+ - file: Hololabs_Logo_512_Grey.png
+   caption: Hololabs_Logo_512_Grey.png
+   eps: Hololabs_Logo_Black.eps
 ---
 
 <img class="banner" src="/images/welcome.jpg">
@@ -98,3 +105,41 @@ creativity, and play.
   </div>
   
 </div>
+
+
+
+<h2>Images</h2>
+
+<div id="masonry-container">
+
+<div class="grid-sizer"></div>
+
+{% for img in page.images %}
+  <div class="item">
+  <a href="/projects/hololabs/{{ img.file }}" target="_blank"><img src="/projects/hololabs/{{ img.file }}"></a><br>
+  {{ img.caption }}<br>
+  [ .eps: <a href="/projects/hololabs/{{ img.eps }}" target="_blank">{{ img.eps }}</a> ]
+  </div>
+{% endfor %}
+
+</div>
+
+
+
+
+
+
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script>
+var container = document.querySelector('#masonry-container');
+var msnry;
+// initialize Masonry after all images have loaded:
+imagesLoaded( container, function() {
+  msnry = new Masonry( container, {
+  "columnWidth": ".grid-sizer",
+  "gutter": 10,
+  "itemSelector": '.item'
+  });
+});
+</script>
