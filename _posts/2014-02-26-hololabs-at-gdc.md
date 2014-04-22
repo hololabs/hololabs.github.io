@@ -1,8 +1,14 @@
 ---
 layout: post
-title:  "Hololabs will be at GDC in March"
-date:   2014-02-26
-tags: hololabs events
+title: Hololabs will be at GDC in March
+date: 
+  - 2014-02-26T00:00:00.000Z
+  - "Tue Feb 25 2014 19:00:00 GMT-0500 (EST)"
+tags: 
+  - ""
+  - hololabs
+  - events
+published: true
 ---
 
 IMAGE HERE!
