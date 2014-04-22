@@ -209,6 +209,16 @@ header #menu ul a strong {
 }
 
 
+.intro-text {
+  font-weight: 400;
+}
+
+.category a {
+  font-weight: normal;
+  color: #222;
+}
+
+
 section {
   /* width:500px;*/
   width:600px;
