@@ -1,11 +1,17 @@
 prose:
-  siteurl: 'http://hololabs.org/'
+  siteurl: 'http://www.hololabs.org'
   media: 'images'
   ignore:
-    - index.html
-    - _config.yml
+    - /css
+    - /images
+    - /js
     - /_layouts
     - /_includes
+    - .gitignore
+    - CNAME
+    - _config.yml
+    - _prose.yml
+    - params.json
   metadata:
     _posts:
       - name: "layout"
@@ -15,18 +21,10 @@ prose:
       - name: "date"
         field:
           element: "text"
-          label: "Date (format: YYYY-MM-DD)"
+          label: "Date (leave blank when creating new page)"
       - name: "categories"
         field:
           element: "multiselect"
-          label: "Add Categories"
-          placeholder: "Choose Categories"
-          options:
-            - name: "Papercade"
-              value: "Papercade"
-            - name: "Floor Kids"
-              value: "Floor Kids"
-            - name: "News"
-              value: "News"
-            - name: "Events"
-              value: "Events"
+          label: "Categories"
+          placeholder: "Create or choose a category"
+          alterable: true
