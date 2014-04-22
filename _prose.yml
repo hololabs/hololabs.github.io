@@ -31,11 +31,11 @@ prose:
         field:
           element: "text"
           label: "Title"
-      - name: "categories"
+      - name: "tags"
         field:
           element: "multiselect"
-          label: "Categories"
-          placeholder: "Create or choose a category"
+          label: "Tags"
+          placeholder: "Choose/Create tag"
           alterable: true
     "*.html":
       - name: "layout"

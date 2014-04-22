@@ -2,7 +2,7 @@
 layout: post
 title:  "Papercade alpha build preview!"
 date:   2014-02-21
-categories: papercade
+tags: papercade
 ---
 
 VIDEO HERE!

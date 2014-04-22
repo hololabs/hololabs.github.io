@@ -2,7 +2,7 @@
 layout: post
 title:  "Hololabs will be at GDC in March"
 date:   2014-02-26
-categories: hololabs events
+tags: hololabs events
 ---
 
 IMAGE HERE!
