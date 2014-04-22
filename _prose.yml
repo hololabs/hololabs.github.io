@@ -37,7 +37,7 @@ prose:
           label: "Categories"
           placeholder: "Create or choose a category"
           alterable: true
-    "/":
+    "*.html":
       - name: "layout"
         field:
           element: "hidden"
