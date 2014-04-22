@@ -1,8 +1,11 @@
 ---
 layout: post
-title:  "Papercade alpha build preview!"
-date:   2014-02-21
-tags: papercade
+title: Papercade alpha build preview!
+date:
+  - 2014-02-21T00:00:00.000Z
+tags:
+ - papercade
+published: true
 ---
 
 VIDEO HERE!
