@@ -20,8 +20,8 @@ prose:
           value: "post"
       - name: "published"
         field:
-          label: "Published"
           element: "checkbox"
+          label: "Published"
           value: "true"
       - name: "date"
         field:
@@ -29,24 +29,24 @@ prose:
           label: "Date (leave blank when creating new page)"
       - name: "title"
         field:
-          label: "Title"
           element: "text"
+          label: "Title"
       - name: "categories"
         field:
           element: "multiselect"
           label: "Categories"
           placeholder: "Create or choose a category"
           alterable: true
-    "":
+    "/":
       - name: "layout"
         field:
           element: "hidden"
           value: "default"
       - name: "title"
         field:
-          label: "Title"
           element: "text"
-      - name: "img011"
+          label: "Title"
+      - name: "img01"
         field:
           element: "text"
-          label: "img01
+          label: "img01"
