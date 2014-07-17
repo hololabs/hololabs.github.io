@@ -28,5 +28,64 @@ Montréal, QC H2T 2A3</a></li>
     </script>
 
 
+
+    {% if page.url == '/index.html' %}
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+    //from https://github.com/gist/4056588
+
+    var Tumblr = Tumblr || {};
+
+    Tumblr.RecentPosts = function(el, postsCount) {
+      var apiUrl = "http://blog.hololabs.org/api/read/json?callback=?&filter=text&num=" + (postsCount || 10);
+
+      var titleTypes = {
+        regular: "regular-title",
+        link: "link-text",
+        quote: "quote-source",
+        photo: "photo-caption",
+        conversation: "conversation-title",
+        video: "video-caption",
+        audio: "audio-caption",
+        answer: "question"
+      };
+
+      var renderPosts = function(posts) {
+        return $.map($.map(posts, postInfo), renderPost);
+      };
+
+      var renderPost = function(post) {
+        return "<li><a href='" + post.url + "'>" + post.title + "</a></li>";
+      };
+
+      var postInfo = function(post) {
+        var titleType = titleTypes[post.type];
+        if (titleType in post) {
+          return {
+            title: post[titleType],
+            url: post["url-with-slug"]
+          };
+        }
+      };
+
+      return {
+        render: function() {
+          var loadingEl = $("<div>").text("Loading...").appendTo($(el));
+          $.getJSON(apiUrl, function(data) {
+            loadingEl.remove();
+            $("<ul class='recent-posts'>").appendTo($(el)).hide().append(renderPosts(data.posts).join("\n")).slideDown('slow');
+          });
+
+          return this;
+        }
+      }
+    };
+    </script>
+    <script type='text/javascript'>
+      $(function() { new Tumblr.RecentPosts($("#recent-posts")).render() })
+    </script>
+    {% endif %}
+
+
   </body>
 </html>
