@@ -1,9 +1,7 @@
-prose:
   siteurl: 'http://www.hololabs.org'
   media: 'images'
   ignore:
     - /css
-    - /images
     - /js
     - /_layouts
     - /_includes
