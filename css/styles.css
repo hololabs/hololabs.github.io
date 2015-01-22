@@ -153,12 +153,6 @@ header #menu ul {
   margin-bottom: 0;
 }
 
-header #menu li {
-  width:89px;
-  float:left;
-  border-right:1px solid #d2d2d2;
-  height:25px;
-}
 
 header #menu ul a {
   line-height:1;
@@ -177,25 +171,47 @@ header #menu strong {
   color:#666;
 }
 
-header #menu li a:hover {
-  color:#000;
-  box-shadow:inset rgba(0,0,0,0.03) 3px 3px 5px;
+/*
+Total header width should be
+65,60,60,75
+
+*/
+
+header #menu li {
+  /* ABOUT */
+  width:65px;
+  float:left;
+  border-right:1px solid #d2d2d2;
+  height:25px;
 }
 
+
 header #menu ul li + li {
-  width:88px;
+  /* SERVICES */
+  width:70px;
   /*border-left:1px solid #fff;*/
 }
 
 header #menu ul li + li + li {
+  /* JOBS */
+  width:50px;
+}
+
+header #menu ul li + li + li + li {
   border-right:none;
-  width:89px;
+  /* CONTACT */
+  width:75px;
 }
 
 header #menu ul a strong {
   font-size:14px;
   display:block;
   color:#222;
+}
+
+header #menu li a:hover {
+  color:#000;
+  box-shadow:inset rgba(0,0,0,0.03) 3px 3px 5px;
 }
 
 .banner {
@@ -206,11 +222,14 @@ header #menu ul a strong {
   margin-right: auto;
   text-align: center;
   display: block;
+  border-radius: 25px;
 }
 
 
 .intro-text {
+  color: #777;
   font-weight: 400;
+  font-size: 18px;
 }
 
 .category a {
@@ -326,6 +345,22 @@ footer li {
   width: 12.5%;
 }
 
+.content-list dt {
+  color:#888;
+  font-weight:550;
+}
+
+.content-list dd {
+  font-size:10pt;
+  margin: 0 0 0 0px;
+  
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  
+  padding-left: 12px ;
+  text-indent: -12px ;
+}
 
 /* masonry customization */
 
